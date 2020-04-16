@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 public class Pipe : MonoBehaviour
 {
     public const float Min = -2.5f, Max = 2.5f; //It is const so cant display in inspector for now I dont know how
+
     private float startPositionX;
 
     private void Start()

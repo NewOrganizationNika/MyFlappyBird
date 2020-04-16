@@ -1,7 +1,5 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
-
 public class Bird : MonoBehaviour
 {
     [SerializeField] private float velocityForce = 1.5f;
@@ -9,7 +7,7 @@ public class Bird : MonoBehaviour
     public UnityEvent onGameOver = null;
     private ushort score;
     private Vector2 startPos;
-
+    
     [SerializeField] private UnityEngine.UI.Text scoreText = null;
 
     private void Awake()
@@ -44,7 +42,7 @@ public class Bird : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         if (!other.CompareTag("ScorePipe")) return;
-        Debug.Log("Score: " + score);
+        Debug.Log("Score: " + score.ToString());
         ++score;
         scoreText.text = score.ToString();
     }
